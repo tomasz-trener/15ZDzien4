@@ -13,11 +13,19 @@ namespace P04AplikacjaZawodnicy
         public int Id_zawodnika;
         public int Id_trenera;
         public string Imie;
-        public string Nazwisko;
+        public string Nazwisko { get; set; }
         public string Kraj;
         public DateTime DataUr;
         public int Wzrost;
         public int Waga;
+
+        public string WidoczneDane 
+        { 
+            get
+            {
+                return Imie + " " + Nazwisko + " " + Kraj;
+            }
+        }
 
         public Zawodnik(string[] komorki)
         {

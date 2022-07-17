@@ -30,6 +30,7 @@ namespace P04AplikacjaZawodnicy
             Zawodnik[] zawodnicy= mz.Wczytaj(dane);
 
             lbDane.DataSource= zawodnicy;
+            lbDane.DisplayMember = "WidoczneDane";
         }
     }
 }
