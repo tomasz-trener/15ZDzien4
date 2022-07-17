@@ -17,7 +17,14 @@ namespace P02AplikacjaPogodaUI
         {
             InitializeComponent();
 
-            string[] wiersze= File.ReadAllLines("miasta.txt");
+            AktualizujMiasta();
+        }
+
+        private void AktualizujMiasta()
+        {
+            string[] wiersze = File.ReadAllLines("miasta.txt");
+
+            cbMiasta.Items.Clear();
 
             for (int i = 0; i < wiersze.Length; i++)
                 cbMiasta.Items.Add(wiersze[i]);
@@ -43,9 +50,17 @@ namespace P02AplikacjaPogodaUI
                 int temp = mp.PodajTemperature(txtNazwaMiasta.Text);
                 MessageBox.Show(Convert.ToString(temp), "Temperatura", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                File.AppendAllText("miasta.txt", txtNazwaMiasta.Text + Environment.NewLine);
-            
-            
+
+                string[] miasta= File.ReadAllLines("miasta.txt");
+
+                string miasto = txtNazwaMiasta.Text;
+                miasto = miasto.Substring(0, 1).ToUpper() + miasto.Substring(1).ToLower();
+                if (!miasta.Contains(miasto) && miasto != "")
+                    File.AppendAllText("miasta.txt", miasto + Environment.NewLine);
+
+                AktualizujMiasta();
+
+
             }
             catch (Exception)
             {
@@ -55,7 +70,7 @@ namespace P02AplikacjaPogodaUI
 
         private void cbMiasta_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string wybraneMiasto = cbMiasta.SelectedText;
+            string wybraneMiasto = cbMiasta.Text;
             txtNazwaMiasta.Text = wybraneMiasto;
             WczytajTemperature();
         }
