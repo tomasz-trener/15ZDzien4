@@ -25,7 +25,7 @@ namespace P03EdytorTekstowy
             tekst =NaMale(tekst);
             wyrazSzukany = NaMale(wyrazSzukany);
 
-            tekst = tekst.Replace("\n", " ");
+            tekst = tekst.Replace("\n", " "); // zamienia znak nowej lini na spacje
             tekst = tekst.Replace("\r", " ");
             tekst = tekst.Replace(".", " ");
 
