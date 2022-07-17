@@ -32,14 +32,16 @@
             this.btnWczytaj = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLicznaZaimportowanychDanych = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtKraj = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbDane
             // 
             this.lbDane.FormattingEnabled = true;
-            this.lbDane.Location = new System.Drawing.Point(12, 42);
+            this.lbDane.Location = new System.Drawing.Point(12, 81);
             this.lbDane.Name = "lbDane";
-            this.lbDane.Size = new System.Drawing.Size(279, 342);
+            this.lbDane.Size = new System.Drawing.Size(279, 303);
             this.lbDane.TabIndex = 0;
             // 
             // btnWczytaj
@@ -70,11 +72,30 @@
             this.lblLicznaZaimportowanychDanych.TabIndex = 3;
             this.lblLicznaZaimportowanychDanych.Text = "0";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Kraj";
+            // 
+            // txtKraj
+            // 
+            this.txtKraj.Location = new System.Drawing.Point(43, 50);
+            this.txtKraj.Name = "txtKraj";
+            this.txtKraj.Size = new System.Drawing.Size(248, 20);
+            this.txtKraj.TabIndex = 5;
+            this.txtKraj.Text = "pol";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 397);
+            this.Controls.Add(this.txtKraj);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblLicznaZaimportowanychDanych);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnWczytaj);
@@ -92,6 +113,8 @@
         private System.Windows.Forms.Button btnWczytaj;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLicznaZaimportowanychDanych;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtKraj;
     }
 }
 

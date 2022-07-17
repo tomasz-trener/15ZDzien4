@@ -30,7 +30,7 @@ namespace P04AplikacjaZawodnicy
                 //foreach (var w in dane)
                 //    lbDane.Items.Add(w);
 
-                ManagerZawodnikow mz = new ManagerZawodnikow();
+                ManagerZawodnikow mz = new ManagerZawodnikow(txtKraj.Text);
                 Zawodnik[] zawodnicy = mz.Wczytaj(dane);
 
                 lbDane.DataSource = zawodnicy;
