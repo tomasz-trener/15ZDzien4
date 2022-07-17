@@ -1,0 +1,15 @@
+﻿
+
+Projekt 
+
+Do pliku "zawodnicy.txt" dodaj kolumnę "miasto"
+uzupełnij ręcznie plik tekstowy zawodników dodając 
+dla każdego zawodnika miasto skąd pochodzi. 
+
+Rozbuduj program P04AplikacjaZawodnicy tak aby 
+podczas wczytywania program wypisywał 
+imie, nazwisko, nazwę miasta oraz aktualną temperaturę w mieście skąd pochodzi zawodnik 
+
+Wypisz jaka jest średnia temperatura ze wszystkich rekordów
+
+*Wypisz jaka jest średnia temperatura dla danego kraju 
