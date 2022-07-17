@@ -27,6 +27,8 @@ namespace P03EdytorTekstowy
         private void txtSciezka_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Pliki tekstowe (*.txt)|*.txt";
+
             DialogResult dr = ofd.ShowDialog();
 
             if (dr == DialogResult.OK)
