@@ -7,16 +7,29 @@ using System.Threading.Tasks;
 
 namespace P02AplikacjaPogodaUI
 {
+    enum Jednostka
+    {
+        Celcjusz,
+        Kelvin,
+        Fahrenheit
+    }
+
     internal class ManagerPogody
     {
         //properties = Właściwosci  - cechy obiektu (bardziej rozbudowane o akcesory dostepu czyli get i set)
         //fields = pola - to samo co właściwosć czyli cechy obiektu 
         //methods = Metody - umiejetnosci danej klasy  czyli co dana klasa potrafi zrobic 
-        //constructors = Konstruktory  - taka funkcja, ktora wywoluje podczas tworzenia obiektu czyli ona definiuje sposób tworzenia obuiektu 
+        //constructors = Konstruktory  - taka funkcja, ktora sie wywoluje podczas tworzenia obiektu czyli ona definiuje sposób tworzenia obuiektu 
 
-        const string urlSzalbon = "https://www.google.com/search?q=pogoda+";
-        const char znakSzukany = '°';
-        const char znakKoncowy = '>';
+        private const string urlSzalbon = "https://www.google.com/search?q=pogoda+";
+        private const char znakSzukany = '°';
+        private const char znakKoncowy = '>';
+        private Jednostka jednostka;
+
+        public ManagerPogody(Jednostka jednostka)
+        {
+            this.jednostka = jednostka;
+        }
 
 
         /// <summary>
@@ -24,7 +37,7 @@ namespace P02AplikacjaPogodaUI
         /// </summary>
         /// <param name="nazwaMiasta">Nazwa miasta, dla którego chcesz znaleźć temperature</param>
         /// <returns>Zwraca wartośc temepratury w stopniach Celcjusza</returns>
-        public int PodajTemperature(string nazwaMiasta)
+        public double PodajTemperature(string nazwaMiasta)
         {
             string url = urlSzalbon + nazwaMiasta;
 
@@ -50,7 +63,25 @@ namespace P02AplikacjaPogodaUI
             int dlugosc = indx - aktualnaPozycja;
             string wynik = dane.Substring(aktualnaPozycja + 1, dlugosc + 1 -2);
 
-            return Convert.ToInt32(wynik);
+            return transformuj(Convert.ToInt32(wynik));
+        }
+
+
+        private double transformuj(int temp)
+        {
+            if (jednostka == Jednostka.Celcjusz)
+                return temp;
+
+            if (jednostka == Jednostka.Fahrenheit)
+                return (temp*1.8)+23;
+
+            if (jednostka == Jednostka.Kelvin)
+                return temp+273.15;
+
+
+            throw new Exception("Nieznana jednostka");
+
+
         }
 
 

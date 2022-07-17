@@ -32,6 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPodajTemeprature = new System.Windows.Forms.Button();
             this.cbMiasta = new System.Windows.Forms.ComboBox();
+            this.rbCelcjusz = new System.Windows.Forms.RadioButton();
+            this.rbFahrenheit = new System.Windows.Forms.RadioButton();
+            this.rbKelvin = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNazwaMiasta
@@ -71,11 +75,56 @@
             this.cbMiasta.TabIndex = 3;
             this.cbMiasta.SelectedIndexChanged += new System.EventHandler(this.cbMiasta_SelectedIndexChanged);
             // 
+            // rbCelcjusz
+            // 
+            this.rbCelcjusz.AutoSize = true;
+            this.rbCelcjusz.Checked = true;
+            this.rbCelcjusz.Location = new System.Drawing.Point(279, 37);
+            this.rbCelcjusz.Name = "rbCelcjusz";
+            this.rbCelcjusz.Size = new System.Drawing.Size(64, 17);
+            this.rbCelcjusz.TabIndex = 4;
+            this.rbCelcjusz.TabStop = true;
+            this.rbCelcjusz.Text = "Celcjusz";
+            this.rbCelcjusz.UseVisualStyleBackColor = true;
+            // 
+            // rbFahrenheit
+            // 
+            this.rbFahrenheit.AutoSize = true;
+            this.rbFahrenheit.Location = new System.Drawing.Point(279, 60);
+            this.rbFahrenheit.Name = "rbFahrenheit";
+            this.rbFahrenheit.Size = new System.Drawing.Size(75, 17);
+            this.rbFahrenheit.TabIndex = 5;
+            this.rbFahrenheit.Text = "Fahrenheit";
+            this.rbFahrenheit.UseVisualStyleBackColor = true;
+            // 
+            // rbKelvin
+            // 
+            this.rbKelvin.AutoSize = true;
+            this.rbKelvin.Location = new System.Drawing.Point(279, 84);
+            this.rbKelvin.Name = "rbKelvin";
+            this.rbKelvin.Size = new System.Drawing.Size(54, 17);
+            this.rbKelvin.TabIndex = 6;
+            this.rbKelvin.Text = "Kelvin";
+            this.rbKelvin.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(276, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Jednostka";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 113);
+            this.ClientSize = new System.Drawing.Size(364, 113);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.rbKelvin);
+            this.Controls.Add(this.rbFahrenheit);
+            this.Controls.Add(this.rbCelcjusz);
             this.Controls.Add(this.cbMiasta);
             this.Controls.Add(this.btnPodajTemeprature);
             this.Controls.Add(this.label1);
@@ -93,6 +142,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPodajTemeprature;
         private System.Windows.Forms.ComboBox cbMiasta;
+        private System.Windows.Forms.RadioButton rbCelcjusz;
+        private System.Windows.Forms.RadioButton rbFahrenheit;
+        private System.Windows.Forms.RadioButton rbKelvin;
+        private System.Windows.Forms.Label label2;
     }
 }
 

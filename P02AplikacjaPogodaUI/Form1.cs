@@ -43,12 +43,19 @@ namespace P02AplikacjaPogodaUI
 
         private void WczytajTemperature()
         {
-            ManagerPogody mp = new ManagerPogody();
+            Jednostka jednostka = Jednostka.Celcjusz;
+            if (rbFahrenheit.Checked)
+                jednostka = Jednostka.Fahrenheit;
 
+            if (rbKelvin.Checked)
+                jednostka = Jednostka.Kelvin;
+
+            ManagerPogody mp = new ManagerPogody(jednostka);
+            
             try
             {
                 // wczytywanie temepratury z google
-                int temp = mp.PodajTemperature(txtNazwaMiasta.Text);
+                double temp = mp.PodajTemperature(txtNazwaMiasta.Text);
                 MessageBox.Show(Convert.ToString(temp), "Temperatura", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
