@@ -1,0 +1,13 @@
+﻿
+
+
+1) Dodaj opcje wyboru pliku do wczytwania 
+stosujac openfileDilalog
+
+2) Po wczytaniu zawodnikow 
+  - podaj ile rekordów zostało zaimportowanych
+ 
+3) dodaj pole tekstowe z opisem kraj
+ - po kliknięciu wczytaj wyświetl zawodnikow
+  z danego kraju 
+
