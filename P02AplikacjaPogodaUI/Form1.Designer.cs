@@ -39,6 +39,7 @@
             this.txtNazwaMiasta.Name = "txtNazwaMiasta";
             this.txtNazwaMiasta.Size = new System.Drawing.Size(165, 20);
             this.txtNazwaMiasta.TabIndex = 0;
+            this.txtNazwaMiasta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNazwaMiasta_KeyDown);
             // 
             // label1
             // 

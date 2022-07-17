@@ -19,6 +19,17 @@ namespace P02AplikacjaPogodaUI
 
         private void btnPodajTemeprature_Click(object sender, EventArgs e)
         {
+            WczytajTemperature();
+        }
+
+        private void txtNazwaMiasta_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                WczytajTemperature();
+        }
+
+        private void WczytajTemperature()
+        {
             ManagerPogody mp = new ManagerPogody();
 
             try
@@ -31,7 +42,6 @@ namespace P02AplikacjaPogodaUI
             {
                 MessageBox.Show("Błąd pobierania temperatury", "Temperatura", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
     }
 }
