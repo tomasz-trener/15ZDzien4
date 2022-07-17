@@ -22,9 +22,14 @@ namespace P04AplikacjaZawodnicy
         {
             string[] dane= File.ReadAllLines(@"C:\dane\15Z\zawodnicy.txt");
 
-            lbDane.Items.Clear();
-            foreach (var w in dane)
-                lbDane.Items.Add(w);
+            //lbDane.Items.Clear();
+            //foreach (var w in dane)
+            //    lbDane.Items.Add(w);
+
+            ManagerZawodnikow mz = new ManagerZawodnikow();
+            Zawodnik[] zawodnicy= mz.Wczytaj(dane);
+
+            lbDane.DataSource= zawodnicy;
         }
     }
 }
