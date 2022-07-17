@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01AplikacjaPogoda", "P01AplikacjaPogoda\P01AplikacjaPogoda.csproj", "{4A9966F2-E90F-41CF-B480-9111B38FE777}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02AplikacjaPogodaUI", "P02AplikacjaPogodaUI\P02AplikacjaPogodaUI.csproj", "{31C1EE35-2785-45AE-9446-CDFB1DC0FA8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4A9966F2-E90F-41CF-B480-9111B38FE777}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A9966F2-E90F-41CF-B480-9111B38FE777}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A9966F2-E90F-41CF-B480-9111B38FE777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31C1EE35-2785-45AE-9446-CDFB1DC0FA8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C1EE35-2785-45AE-9446-CDFB1DC0FA8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C1EE35-2785-45AE-9446-CDFB1DC0FA8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C1EE35-2785-45AE-9446-CDFB1DC0FA8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
