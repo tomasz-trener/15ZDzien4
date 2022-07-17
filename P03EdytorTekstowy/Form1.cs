@@ -36,5 +36,25 @@ namespace P03EdytorTekstowy
                 txtSciezka.Text=ofd.FileName;
             }
         }
+
+        private void btnNaDuze_Click(object sender, EventArgs e)
+        {
+            ManagerTekstu mt = new ManagerTekstu();
+            txtDane.Text = mt.NaDuze(txtDane.Text);
+        }
+
+        private void btnNaMale_Click(object sender, EventArgs e)
+        {
+            ManagerTekstu mt = new ManagerTekstu();
+            txtDane.Text = mt.NaMale(txtDane.Text);
+        }
+
+        private void btnPolicz_Click(object sender, EventArgs e)
+        {
+            ManagerTekstu mt = new ManagerTekstu();
+            lblWynikZliczenia.Text =
+               Convert.ToString(mt.Policz(txtDane.Text,txtSzukanyWyraz.Text));
+
+        }
     }
 }
