@@ -36,6 +36,11 @@ namespace P01AplikacjaPogoda
             // char p = dane[0];// mozemy odwolac sie do konkretnego znaku w stringu 
 
             int indx = dane.IndexOf(znakSzukany);
+
+            if (indx == -1)
+                throw new Exception("Nie znaleziono znaku końcowego " + znakKoncowy);
+
+
             int aktualnaPozycja = indx;
             while (dane[aktualnaPozycja] != znakKoncowy)
                 aktualnaPozycja--;

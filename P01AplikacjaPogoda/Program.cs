@@ -18,9 +18,17 @@ namespace P01AplikacjaPogoda
                 string nazwaMiasta = Console.ReadLine();
 
                 ManagerPogody mp = new ManagerPogody();
-                int wynik= mp.PodajTemperature(nazwaMiasta);
 
-                Console.WriteLine(wynik);
+                try
+                {
+                    int wynik = mp.PodajTemperature(nazwaMiasta);
+                    Console.WriteLine(wynik);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Nie udało sie pobrać temperatury");
+                }
+               
             }
 
 
