@@ -30,6 +30,8 @@
         {
             this.lbDane = new System.Windows.Forms.ListBox();
             this.btnWczytaj = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblLicznaZaimportowanychDanych = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbDane
@@ -50,16 +52,37 @@
             this.btnWczytaj.UseVisualStyleBackColor = true;
             this.btnWczytaj.Click += new System.EventHandler(this.btnWczytaj_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(94, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Zaimportowano rekordów:";
+            // 
+            // lblLicznaZaimportowanychDanych
+            // 
+            this.lblLicznaZaimportowanychDanych.AutoSize = true;
+            this.lblLicznaZaimportowanychDanych.Location = new System.Drawing.Point(227, 19);
+            this.lblLicznaZaimportowanychDanych.Name = "lblLicznaZaimportowanychDanych";
+            this.lblLicznaZaimportowanychDanych.Size = new System.Drawing.Size(13, 13);
+            this.lblLicznaZaimportowanychDanych.TabIndex = 3;
+            this.lblLicznaZaimportowanychDanych.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 397);
+            this.Controls.Add(this.lblLicznaZaimportowanychDanych);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnWczytaj);
             this.Controls.Add(this.lbDane);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -67,6 +90,8 @@
 
         private System.Windows.Forms.ListBox lbDane;
         private System.Windows.Forms.Button btnWczytaj;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLicznaZaimportowanychDanych;
     }
 }
 

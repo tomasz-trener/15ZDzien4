@@ -20,17 +20,26 @@ namespace P04AplikacjaZawodnicy
 
         private void btnWczytaj_Click(object sender, EventArgs e)
         {
-            string[] dane= File.ReadAllLines(@"C:\dane\15Z\zawodnicy.txt");
 
-            //lbDane.Items.Clear();
-            //foreach (var w in dane)
-            //    lbDane.Items.Add(w);
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string[] dane = File.ReadAllLines(ofd.FileName);
 
-            ManagerZawodnikow mz = new ManagerZawodnikow();
-            Zawodnik[] zawodnicy= mz.Wczytaj(dane);
+                //lbDane.Items.Clear();
+                //foreach (var w in dane)
+                //    lbDane.Items.Add(w);
 
-            lbDane.DataSource= zawodnicy;
-            lbDane.DisplayMember = "WidoczneDane";
+                ManagerZawodnikow mz = new ManagerZawodnikow();
+                Zawodnik[] zawodnicy = mz.Wczytaj(dane);
+
+                lbDane.DataSource = zawodnicy;
+                lbDane.DisplayMember = "WidoczneDane";
+
+                lblLicznaZaimportowanychDanych.Text = Convert.ToString(zawodnicy.Length);
+            }
+
+           
         }
     }
 }
