@@ -47,17 +47,22 @@ namespace P02AplikacjaPogodaUI
 
             try
             {
+                // wczytywanie temepratury z google
                 int temp = mp.PodajTemperature(txtNazwaMiasta.Text);
                 MessageBox.Show(Convert.ToString(temp), "Temperatura", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
+                // uzupełniamy lokalny plik tekstowy i wyszukane miasto
                 string[] miasta= File.ReadAllLines("miasta.txt");
-
+                // przy okazji sprawdzamy, czy juz wczenij ktos nie uzyl tego miasta bo nie chcemy duplikatów
                 string miasto = txtNazwaMiasta.Text;
+                // ujednolicamy wielkoc liter tak aby pierwsza literka byla duza pozpostale male 
                 miasto = miasto.Substring(0, 1).ToUpper() + miasto.Substring(1).ToLower();
+               
                 if (!miasta.Contains(miasto) && miasto != "")
                     File.AppendAllText("miasta.txt", miasto + Environment.NewLine);
 
+                // zaktualizj nasza liste rozwijana o nowe miasto, które zostało dodane do naszej loklanej bazy danch miast
                 AktualizujMiasta();
 
 
