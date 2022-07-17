@@ -20,7 +20,7 @@ namespace P03EdytorTekstowy
         }
 
 
-        public int Policz(string tekst, string wyrazSzukany)
+        public string[] Policz(string tekst, string wyrazSzukany)
         {
             tekst =NaMale(tekst);
             wyrazSzukany = NaMale(wyrazSzukany);
@@ -31,15 +31,17 @@ namespace P03EdytorTekstowy
 
 
             string[] wyrazy=  tekst.Split(' ');
-            int suma = 0;
+            //int suma = 0;
 
-            //List<>
+            List<string> listaWyszukanychWyrazow = new List<string>();
+
 
             foreach (var w in wyrazy)
                 if (w.Contains(wyrazSzukany))
-                    suma++;
+                    listaWyszukanychWyrazow.Add(w);
+                   // suma++;
                  
-            return suma;
+            return listaWyszukanychWyrazow.ToArray();
         }
     }
 }

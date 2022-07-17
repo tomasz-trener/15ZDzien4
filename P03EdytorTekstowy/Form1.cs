@@ -52,8 +52,12 @@ namespace P03EdytorTekstowy
         private void btnPolicz_Click(object sender, EventArgs e)
         {
             ManagerTekstu mt = new ManagerTekstu();
-            lblWynikZliczenia.Text =
-               Convert.ToString(mt.Policz(txtDane.Text,txtSzukanyWyraz.Text));
+            string[] wyrazy = mt.Policz(txtDane.Text, txtSzukanyWyraz.Text);
+            lblWynikZliczenia.Text = Convert.ToString(wyrazy.Length);
+
+            lbDane.Items.Clear();
+            foreach (var w in wyrazy)
+                lbDane.Items.Add(w);
 
         }
     }

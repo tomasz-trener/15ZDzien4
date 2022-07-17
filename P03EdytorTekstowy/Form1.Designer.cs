@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPolicz = new System.Windows.Forms.Button();
             this.lblWynikZliczenia = new System.Windows.Forms.Label();
+            this.lbDane = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // txtDane
@@ -121,11 +122,20 @@
             this.lblWynikZliczenia.TabIndex = 8;
             this.lblWynikZliczenia.Text = "0";
             // 
+            // lbDane
+            // 
+            this.lbDane.FormattingEnabled = true;
+            this.lbDane.Location = new System.Drawing.Point(413, 192);
+            this.lbDane.Name = "lbDane";
+            this.lbDane.Size = new System.Drawing.Size(192, 251);
+            this.lbDane.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 450);
+            this.Controls.Add(this.lbDane);
             this.Controls.Add(this.lblWynikZliczenia);
             this.Controls.Add(this.btnPolicz);
             this.Controls.Add(this.label1);
@@ -153,6 +163,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPolicz;
         private System.Windows.Forms.Label lblWynikZliczenia;
+        private System.Windows.Forms.ListBox lbDane;
     }
 }
 
