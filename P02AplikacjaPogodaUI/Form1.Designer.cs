@@ -31,6 +31,7 @@
             this.txtNazwaMiasta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPodajTemeprature = new System.Windows.Forms.Button();
+            this.cbMiasta = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtNazwaMiasta
@@ -61,11 +62,21 @@
             this.btnPodajTemeprature.UseVisualStyleBackColor = true;
             this.btnPodajTemeprature.Click += new System.EventHandler(this.btnPodajTemeprature_Click);
             // 
+            // cbMiasta
+            // 
+            this.cbMiasta.FormattingEnabled = true;
+            this.cbMiasta.Location = new System.Drawing.Point(12, 72);
+            this.cbMiasta.Name = "cbMiasta";
+            this.cbMiasta.Size = new System.Drawing.Size(165, 21);
+            this.cbMiasta.TabIndex = 3;
+            this.cbMiasta.SelectedIndexChanged += new System.EventHandler(this.cbMiasta_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 84);
+            this.ClientSize = new System.Drawing.Size(283, 113);
+            this.Controls.Add(this.cbMiasta);
             this.Controls.Add(this.btnPodajTemeprature);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNazwaMiasta);
@@ -81,6 +92,7 @@
         private System.Windows.Forms.TextBox txtNazwaMiasta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPodajTemeprature;
+        private System.Windows.Forms.ComboBox cbMiasta;
     }
 }
 

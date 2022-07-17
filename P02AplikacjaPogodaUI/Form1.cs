@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,11 @@ namespace P02AplikacjaPogodaUI
         public Form1()
         {
             InitializeComponent();
+
+            string[] wiersze= File.ReadAllLines("miasta.txt");
+
+            for (int i = 0; i < wiersze.Length; i++)
+                cbMiasta.Items.Add(wiersze[i]);
         }
 
         private void btnPodajTemeprature_Click(object sender, EventArgs e)
@@ -37,11 +43,23 @@ namespace P02AplikacjaPogodaUI
                 int temp = mp.PodajTemperature(txtNazwaMiasta.Text);
                 MessageBox.Show(Convert.ToString(temp), "Temperatura", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                File.AppendAllText("miasta.txt", txtNazwaMiasta.Text + Environment.NewLine);
+            
+            
             }
             catch (Exception)
             {
                 MessageBox.Show("Błąd pobierania temperatury", "Temperatura", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void cbMiasta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string wybraneMiasto = cbMiasta.SelectedText;
+            txtNazwaMiasta.Text = wybraneMiasto;
+            WczytajTemperature();
+        }
+
+        //przerwa 10:50
     }
 }
